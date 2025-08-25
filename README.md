@@ -1,3 +1,12 @@
+
+Este cambio hará que la documentación sea mucho más clara para cualquier persona que se una al proyecto.
+
+En resumen: ¡tu entorno está listo! Solo activa `neuro_env` si es necesario y puedes empezar a trabajar.
+
+<!--
+[PROMPT_SUGGESTION]Analiza el fichero `ci.yml` y sugiere mejoras para optimizar los flujos de trabajo de CI/CD.[/PROMPT_SUGGESTION]
+[PROMPT_SUGGESTION]Revisa el script `knowledge_orchestrator.py` y refactorízalo para mejorar su modularidad y manejo de errores.[/PROMPT_SUGGESTION]
+-->
 # Neurodiagnoses: An AI-Powered Ecosystem for Neurodegenerative Disorders
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/Fundacion-de-Neurociencias/neurodiagnoses)](https://github.com/Fundacion-de-Neurociencias/neurodiagnoses/commits/main)
@@ -48,21 +57,15 @@ This project is architected to run within GitHub Codespaces, which provides a co
 1. Launch the Environment
 Create a new codespace from the main page of the neurodiagnoses repository on GitHub.
 
-2. Initialize Submodules
-Our ecosystem uses Git submodules to manage the private neurodiagnoses-engine and the standalone scikg projects. After the Codespace builds, initialize them with this command:
+2. Environment Setup
+The Codespace environment is configured automatically by the `.devcontainer/postCreate.sh` script upon creation. This script handles:
+- Git submodule initialization.
+- Creation of the `neuro_env` Conda environment from `environment.yml`.
+- Global installation of the `gemini-cli`.
 
-```bash
-git submodule update --init --recursive
-```
+After the setup finishes, simply open a new terminal. The `neuro_env` Conda environment will be activated automatically, and the `gemini` command will be available.
 
-3. Install Dependencies
-Install all required Python packages from the master requirements file:
-
-```bash
-pip install -r requirements.txt
-```
-
-4. Configure API Keys
+3. Configure API Keys
 The knowledge harvesting and generation pipelines require API keys. Copy the template file and add your key:
 
 ```bash
