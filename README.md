@@ -53,9 +53,10 @@ The Codespace environment is configured automatically by the `.devcontainer/post
 - Git submodule initialization.
 - Creation of the `neuro_env` Conda environment from `environment.yml`.
 - Global installation of the `gemini-cli`.
+- Installation and configuration of `Cipher` to provide a memory layer for AI assistants.
  
 After the setup script finishes, open a new terminal. The environment is ready:
-- The `gemini` command is available globally in any terminal.
+- The `gemini` and `cipher` commands are available globally in any terminal.
 - For project-specific Python tasks, you must activate the Conda environment:
  
   ```bash
