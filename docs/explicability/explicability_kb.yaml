@@ -1,0 +1,33 @@
+- concept_id: PET_VISUAL_READ_VALIDITY
+  title: "Validación de la Lectura Visual del PET Amiloide en la Práctica Clínica Real"
+  summary: |
+    Un estudio a gran escala (N=10,350) demostró una alta concordancia (86.3%) entre las
+    lecturas visuales de PET amiloide realizadas por radiólogos locales y una cuantificación
+    centralizada estándar (escala Centiloide). Esto valida el uso de la interpretación
+    visual clínica como una fuente de evidencia fiable para determinar el estatus del amiloide.
+  source_paper_doi: "10.1001/jamaneurol.2025.2218"
+  impact_on_architecture: |
+    Proporciona la justificación científica para aceptar entradas binarias (positivo/negativo)
+    de PET amiloide en el Eje 2, ya que se ha demostrado que son una aproximación fiable
+    de la carga real de amiloide. También sienta las bases para futuras mejoras del motor
+    que puedan modelar la tasa de discordancia (~14%) como una incertidumbre probabilística.
+  related_components:
+    - "neurodiagnoses-engine/data/knowledge_base/axis2_molecular_kb.csv"
+    - "neurodiagnoses-engine/tools/bayesian_engine/core.py"
+- concept_id: BVFTD_PPD_DIFFERENTIATION
+  title: "Diferenciación de bvFTD y Trastornos Psiquiátricos Primarios (PPD)"
+  summary: |
+    Un estudio multi-céntrico (DIPPA-FTD) identificó un conjunto de mediciones neuropsicológicas
+    capaces de distinguir de forma robusta la variante conductual de la Demencia Frontotemporal (bvFTD)
+    de los Trastornos Psiquiátricos Primarios de inicio tardío. Los discriminadores clave incluyen
+    la fluidez verbal, el screening cognitivo global y la atención, proporcionando Odds Ratios (OR)
+    cuantitativos para cada hallazgo.
+  source_paper_doi: "10.1093/braincomms/fcaf199"
+  impact_on_architecture: |
+    Este concepto permite al BayesianEngine ir más allá de la evidencia binaria y utilizar
+    estadísticas cuantitativas (Odds Ratios) directamente extraídas de la literatura para
+    ajustar las probabilidades del diagnóstico diferencial. Es una implementación clave de
+    la capacidad trans-categórica del motor.
+  related_components:
+    - "tools/bayesian_engine/core.py"
+    - "data/knowledge_base/axis3_phenotype_kb.csv"
