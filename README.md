@@ -1,12 +1,3 @@
-
-Este cambio hará que la documentación sea mucho más clara para cualquier persona que se una al proyecto.
-
-En resumen: ¡tu entorno está listo! Solo activa `neuro_env` si es necesario y puedes empezar a trabajar.
-
-<!--
-[PROMPT_SUGGESTION]Analiza el fichero `ci.yml` y sugiere mejoras para optimizar los flujos de trabajo de CI/CD.[/PROMPT_SUGGESTION]
-[PROMPT_SUGGESTION]Revisa el script `knowledge_orchestrator.py` y refactorízalo para mejorar su modularidad y manejo de errores.[/PROMPT_SUGGESTION]
--->
 # Neurodiagnoses: An AI-Powered Ecosystem for Neurodegenerative Disorders
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/Fundacion-de-Neurociencias/neurodiagnoses)](https://github.com/Fundacion-de-Neurociencias/neurodiagnoses/commits/main)
@@ -62,8 +53,16 @@ The Codespace environment is configured automatically by the `.devcontainer/post
 - Git submodule initialization.
 - Creation of the `neuro_env` Conda environment from `environment.yml`.
 - Global installation of the `gemini-cli`.
-
-After the setup finishes, simply open a new terminal. The `neuro_env` Conda environment will be activated automatically, and the `gemini` command will be available.
+ 
+After the setup script finishes, open a new terminal. The environment is ready:
+- The `gemini` command is available globally in any terminal.
+- For project-specific Python tasks, you must activate the Conda environment:
+ 
+  ```bash
+  conda activate neuro_env
+  ```
+ 
+  Your terminal prompt will change to show `(neuro_env)`, indicating the environment is active.
 
 3. Configure API Keys
 The knowledge harvesting and generation pipelines require API keys. Copy the template file and add your key:
