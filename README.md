@@ -1,4 +1,4 @@
-# Neurodiagnoses: An AI-Powered Ecosystem for Neurodegenerative Disorders
+# Neurodiagnoses: An AI-Powered Ecosystem for complex CNS Disorders
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/Fundacion-de-Neurociencias/neurodiagnoses)](https://github.com/Fundacion-de-Neurociencias/neurodiagnoses/commits/main)
 [![GitHub issues](https://img.shields.io/github/issues/Fundacion-de-Neurociencias/neurodiagnoses)](https://github.com/Fundacion-de-Neurociencias/neurodiagnoses/issues)
